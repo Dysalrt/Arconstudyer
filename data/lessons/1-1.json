@@ -1,35 +1,32 @@
 {
   "id": "1-1",
-  "title": "Привет и пока",
+  "title": "Начните общение",
   "xp": 10,
   "theory": [
     {
       "title": "Первые фразы",
       "body": "Начнём с того, что понадобится в любом разговоре — поздороваться, попрощаться и назвать себя.",
       "examples": [
-        { "word": "Qite", "ipa": "[ˈki.tɛ]", "translation": "привет" },
-        { "word": "Qami", "ipa": "[ˈka.mi]", "translation": "пока" }
+        { "word": "Qite", "ipa": "[ˈki.tɛ]", "translation": "Привет" },
+        { "word": "Qami", "ipa": "[ˈka.mi]", "translation": "Пока" }
       ]
     },
     {
       "title": "Местоимения",
-      "body": "В Arcon местоимения короткие и не меняются по родам для «я» и «ты» — род есть только у «он / она / оно».",
+      "body": "Для самого начала вам понадобится знать всего 2 местоимения",
       "examples": [
         { "word": "Vi", "ipa": "[vi]", "translation": "я" },
-        { "word": "Vū", "ipa": "[vju]", "translation": "ты" },
-        { "word": "Il", "ipa": "[il]", "translation": "он" },
-        { "word": "El", "ipa": "[ɛl]", "translation": "она" },
-        { "word": "Di", "ipa": "[di]", "translation": "оно" }
+        { "word": "Vū", "ipa": "[vju]", "translation": "ты" }
       ]
     },
     {
       "title": "Вопросительные слова",
-      "body": "Все вопросительные слова в Arcon начинаются на Q — это упростит их запоминание.",
+      "body": "Вопросительные слова можно достаточно легко опознать ведь они почти всегда начинаются на q",
       "examples": [
-        { "word": "Qu", "ipa": "[ku]", "translation": "что" },
-        { "word": "Qa", "ipa": "[ka]", "translation": "кто" },
-        { "word": "Qer", "ipa": "[kɛr]", "translation": "где" },
-        { "word": "Qo", "ipa": "[ko]", "translation": "как" }
+        { "word": "Qu", "ipa": "[kju]", "translation": "что" },
+        { "word": "Qa", "ipa": "[kja]", "translation": "кто" },
+        { "word": "Qer", "ipa": "[kjɛr]", "translation": "где" },
+        { "word": "Qo", "ipa": "[kjo]", "translation": "как" }
       ]
     }
   ],
