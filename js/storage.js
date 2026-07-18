@@ -5,27 +5,52 @@
 
 const Storage = (() => {
   const tg = window.Telegram && window.Telegram.WebApp;
-  const hasCloud = !!(tg && tg.CloudStorage);
+
+  // CloudStorage появился в Bot API 6.9 — на более старых версиях Telegram-клиента
+  // объект tg.CloudStorage может существовать, но вызов его методов кинет
+  // WebAppMethodUnsupported и зависнет без try/catch. Поэтому проверяем версию
+  // явно и дополнительно страхуемся try/catch на каждый вызов.
+  const hasCloud = !!(
+    tg &&
+    tg.CloudStorage &&
+    typeof tg.isVersionAtLeast === "function" &&
+    tg.isVersionAtLeast("6.9")
+  );
 
   function get(key) {
     return new Promise((resolve) => {
       if (hasCloud) {
-        tg.CloudStorage.getItem(key, (err, value) => {
-          if (err || !value) return resolve(null);
-          try { resolve(JSON.parse(value)); } catch { resolve(null); }
-        });
+        try {
+          tg.CloudStorage.getItem(key, (err, value) => {
+            if (err || !value) return resolve(null);
+            try { resolve(JSON.parse(value)); } catch { resolve(null); }
+          });
+        } catch (e) {
+          console.warn("CloudStorage.getItem failed, falling back to localStorage", e);
+          fallbackGet(key, resolve);
+        }
       } else {
-        const raw = localStorage.getItem(key);
-        resolve(raw ? JSON.parse(raw) : null);
+        fallbackGet(key, resolve);
       }
     });
+  }
+
+  function fallbackGet(key, resolve) {
+    const raw = localStorage.getItem(key);
+    resolve(raw ? JSON.parse(raw) : null);
   }
 
   function set(key, value) {
     const raw = JSON.stringify(value);
     return new Promise((resolve) => {
       if (hasCloud) {
-        tg.CloudStorage.setItem(key, raw, () => resolve(true));
+        try {
+          tg.CloudStorage.setItem(key, raw, () => resolve(true));
+        } catch (e) {
+          console.warn("CloudStorage.setItem failed, falling back to localStorage", e);
+          localStorage.setItem(key, raw);
+          resolve(true);
+        }
       } else {
         localStorage.setItem(key, raw);
         resolve(true);
