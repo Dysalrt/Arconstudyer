@@ -1,0 +1,62 @@
+{
+  "id": "2-2",
+  "title": "Первые глаголы",
+  "xp": 15,
+  "theory": [
+    {
+      "title": "Первые глаголы",
+      "body": "Чтобы нормально общатся вам нужно знать хотя бы пару глаголов, поэтому давайте познакомимся хотя бы с парочкою из них",
+      "examples": [
+        { "word": "e", "ipa": "ɛ", "translation": "быть" },
+        { "word": "ane", "ipa": "anɛ", "translation": "делать" }
+      ]
+    },
+    {
+      "title": "Изменения глаголов",
+      "body": "Чтобы говорить глаголами надо знать как их менять по времени, и базой всегда будет настоящее, для того чтобы изменить глагол для использования в настоящем времени просто посмотрите на схему",
+      "examples": [
+        { "word": "Тип I → +de", "ipa": "", "translation": "" },
+        { "word": "Тип II → +e", "ipa": "", "translation": "делать → буду делать" }
+      ]
+    },
+    {
+      "title": "Примеры I",
+      "body": "Разберем на примерах",
+      "examples": [
+        { "word": "e → тип I → +de → ede", "ipa": "", "translation": "" },
+        { "word": "ane → тип I → +de → anede", "ipa": "", "translation": "" }
+      ]
+    },
+    {
+      "title": "Примеры II",
+      "body": "Пока у нас нет настолько много примеров но мы уже знаем базу",
+      "examples": [
+        { "word": "Vi ede", "ipa": "vi ɛdɛ", "translation": "Я есть" },
+        { "word": "Vū anede", "ipa": "Vū anɛdɛ", "translation": "Ты делаешь" }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как будет «ane» (делать) в настоящем?",
+      "ipaHint": null,
+      "options": ["anede", "aneda", "anedo"],
+      "answer": "anede"
+    },
+    {
+      "type": "choice",
+      "prompt": "Как сказать 'Я есть'",
+      "ipaHint": null,
+      "options": ["Vi e", "Vi ede", "Vū e", "Vū ede"],
+      "answer": "Vi ede"
+    },
+    {
+      "type": "choice",
+      "prompt": "Переведи: «Vi anede»",
+      "ipaHint": null,
+      "options": ["я делаю", "я делать", "я делал", "ты делал"],
+      "answer": "я делаю"
+    }
+  ]
+}

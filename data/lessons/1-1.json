@@ -1,0 +1,48 @@
+{
+  "id": "1-1",
+  "title": "Начните общение",
+  "xp": 10,
+  "theory": [
+    {
+      "title": "Первые фразы",
+      "body": "Начнём с того, что понадобится в любом разговоре — поздороваться, попрощаться и назвать себя.",
+      "examples": [
+        { "word": "Qite", "ipa": "[ˈkji.tɛ]", "translation": "Привет" },
+        { "word": "Qami", "ipa": "[ˈkja.mi]", "translation": "Пока" }
+      ]
+    },
+    {
+      "title": "Местоимения",
+      "body": "Для самого начала вам понадобится знать всего 2 местоимения",
+      "examples": [
+        { "word": "Vi", "ipa": "[vi]", "translation": "я" },
+        { "word": "Vū", "ipa": "[vju]", "translation": "ты" }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как будет «Привет»?",
+      "ipaHint": null,
+      "options": ["Qite", "Qami", "Vi", "Vū"],
+      "answer": "Qite"
+    },
+    {
+      "type": "choice",
+      "prompt": "Что значит «Vū»?",
+      "ipaHint": "[vju]",
+      "options": ["я", "ты", "он", "оно"],
+      "answer": "ты"
+    },
+    {
+      "type": "match",
+      "pairs": [
+        ["Vi", "я"],
+        ["Vū", "ты"],
+        ["Qite", "Привет"],
+        ["Qami", "Пока"]
+      ]
+    }
+  ]
+}
