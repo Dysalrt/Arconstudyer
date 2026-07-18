@@ -1,9 +1,5 @@
 // tts.js
-// Автоматическая озвучка без записанного голоса.
-// Идея: правила чтения Arcon почти 1-в-1 совпадают со звуками русских букв,
-// поэтому переводим спеллинг Arcon в кириллическую транслитерацию
-// и проигрываем через системный русский голос (Web Speech API).
-// Это приближение, а не настоящее произношение носителя — известный компромисс.
+// Используем бесплатный движок Google Translate TTS для качественного звучания.
 
 const TTS = (() => {
   const LETTER_MAP = {
@@ -21,38 +17,29 @@ const TTS = (() => {
       .join("");
   }
 
-  const supported = "speechSynthesis" in window;
-  let ruVoice = null;
-
-  function pickVoice() {
-    if (!supported) return;
-    const voices = speechSynthesis.getVoices();
-    ruVoice = voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("ru")) || null;
-  }
-
-  if (supported) {
-    pickVoice();
-    speechSynthesis.onvoiceschanged = pickVoice;
-  }
-
-  // isArconWord=true (по умолчанию) — транслитерируем перед озвучкой.
-  // isArconWord=false — текст уже на русском, просто произносим как есть.
+  /**
+   * Воспроизводит текст.
+   * @param {string} text - Текст для озвучки.
+   * @param {boolean} isArconWord - Если true, транслитерирует Arcon в кириллицу.
+   */
   function speak(text, isArconWord = true) {
-    if (!supported) return;
     const toSay = isArconWord ? transliterate(text) : text;
-    const utter = new SpeechSynthesisUtterance(toSay);
-    utter.lang = "ru-RU";
-    if (ruVoice) utter.voice = ruVoice;
-    utter.rate = 0.85;
-    speechSynthesis.cancel(); // прервать предыдущую фразу, если ещё играет
-    speechSynthesis.speak(utter);
+    
+    // Формируем URL для озвучки от Google
+    // tl=ru — целевой язык русский
+    // client=tw-ob — клиент, который позволяет получать звук без API-ключа
+    const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ru&client=tw-ob&q=${encodeURIComponent(toSay)}`;
+    
+    const audio = new Audio(url);
+    
+    // Если уже играет другой звук, можно остановить текущий (опционально)
+    audio.play().catch(e => console.error("Ошибка воспроизведения:", e));
   }
 
-  // Проверяем, что строка — это "чистое" слово Arcon (буквы латиницы + ū),
-  // а не IPA-нотация вроде "[x]" или составная форма вроде "ane → anede".
   function isSpeakable(text) {
+    // Проверка, что это буквы латиницы (для Arcon слов)
     return /^[A-Za-zŪū]+$/.test(text.trim());
   }
 
-  return { speak, isSpeakable, supported };
+  return { speak, isSpeakable, supported: true };
 })();
