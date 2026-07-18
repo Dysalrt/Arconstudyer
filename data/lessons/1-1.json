@@ -36,28 +36,12 @@
       "answer": "ты"
     },
     {
-      "type": "choice",
-      "prompt": "Как будет «Где»?",
-      "ipaHint": null,
-      "options": ["Qu", "Qa", "Qer", "Qo"],
-      "answer": "Qer"
-    },
-    {
       "type": "match",
       "pairs": [
         ["Vi", "я"],
         ["Il", "он"],
         ["El", "она"],
         ["Di", "оно"]
-      ]
-    },
-    {
-      "type": "match",
-      "pairs": [
-        ["Qu", "что"],
-        ["Qa", "кто"],
-        ["Qer", "где"],
-        ["Qo", "как"]
       ]
     }
   ]
