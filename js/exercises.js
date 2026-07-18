@@ -143,10 +143,45 @@ const Exercises = (() => {
     return a;
   }
 
+  // ---------- Тип: свободный ввод (перевод / вставить форму слова) ----------
+  function normalize(str) {
+    return str
+      .toLowerCase()
+      .trim()
+      .replace(/[.,!?;:"'«»ё]/g, (m) => (m === "ё" ? "е" : ""))
+      .replace(/\s+/g, " ");
+  }
+
+  function renderWrite(container, data, onReady) {
+    container.innerHTML = `
+      <div class="exercise-prompt">
+        ${data.prompt}
+        ${data.ipaHint ? `<span class="ipa-hint">${data.ipaHint}</span>` : ""}
+      </div>
+      <input type="text" class="write-input" placeholder="Напиши ответ..." autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" />
+    `;
+    const input = container.querySelector(".write-input");
+    input.addEventListener("input", () => {
+      currentAnswerReady = input.value.trim().length > 0;
+      onReady();
+    });
+    input.focus();
+
+    checkFn = () => {
+      const norm = normalize(input.value);
+      const acceptedNorm = data.answers.map(normalize);
+      const isCorrect = acceptedNorm.includes(norm);
+      input.disabled = true;
+      input.classList.add(isCorrect ? "correct" : "incorrect");
+      return isCorrect;
+    };
+  }
+
   function render(container, data, onReady) {
     reset();
     if (data.type === "choice") renderChoice(container, data, onReady);
     else if (data.type === "match") renderMatch(container, data, onReady);
+    else if (data.type === "write") renderWrite(container, data, onReady);
   }
 
   return { render, isReady, check, reset };
