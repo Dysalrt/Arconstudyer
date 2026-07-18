@@ -1,6 +1,4 @@
 // tts.js
-// Используем бесплатный движок Google Translate TTS для качественного звучания.
-
 const TTS = (() => {
   const LETTER_MAP = {
     a: "а", b: "б", c: "к", d: "д", e: "э", f: "ф", g: "г",
@@ -17,29 +15,37 @@ const TTS = (() => {
       .join("");
   }
 
-  /**
-   * Воспроизводит текст.
-   * @param {string} text - Текст для озвучки.
-   * @param {boolean} isArconWord - Если true, транслитерирует Arcon в кириллицу.
-   */
+  let voices = [];
+  // Загружаем голоса при инициализации
+  function loadVoices() {
+    voices = window.speechSynthesis.getVoices();
+  }
+  
+  loadVoices();
+  if (window.speechSynthesis.onvoiceschanged !== undefined) {
+    window.speechSynthesis.onvoiceschanged = loadVoices;
+  }
+
   function speak(text, isArconWord = true) {
     const toSay = isArconWord ? transliterate(text) : text;
+    const utterance = new SpeechSynthesisUtterance(toSay);
     
-    // Формируем URL для озвучки от Google
-    // tl=ru — целевой язык русский
-    // client=tw-ob — клиент, который позволяет получать звук без API-ключа
-    const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ru&client=tw-ob&q=${encodeURIComponent(toSay)}`;
+    // Пытаемся найти качественный голос (Google или системный русский)
+    const preferredVoice = voices.find(v => 
+      v.lang.includes('ru') && (v.name.includes('Google') || v.name.includes('Russian'))
+    ) || voices.find(v => v.lang.includes('ru'));
+
+    if (preferredVoice) {
+      utterance.voice = preferredVoice;
+    }
+
+    utterance.lang = "ru-RU";
+    utterance.rate = 0.85; // Чуть медленнее — звучит естественнее
+    utterance.pitch = 1.0; // Стандартный тон
     
-    const audio = new Audio(url);
-    
-    // Если уже играет другой звук, можно остановить текущий (опционально)
-    audio.play().catch(e => console.error("Ошибка воспроизведения:", e));
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(utterance);
   }
 
-  function isSpeakable(text) {
-    // Проверка, что это буквы латиницы (для Arcon слов)
-    return /^[A-Za-zŪū]+$/.test(text.trim());
-  }
-
-  return { speak, isSpeakable, supported: true };
+  return { speak, isSpeakable: (t) => /^[A-Za-zŪū]+$/.test(t.trim()) };
 })();
