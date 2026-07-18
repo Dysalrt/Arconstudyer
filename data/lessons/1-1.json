@@ -19,16 +19,6 @@
         { "word": "Vū", "ipa": "[vju]", "translation": "ты" }
       ]
     },
-    {
-      "title": "Вопросительные слова",
-      "body": "Вопросительные слова можно достаточно легко опознать ведь они почти всегда начинаются на q",
-      "examples": [
-        { "word": "Qu", "ipa": "[kju]", "translation": "что" },
-        { "word": "Qa", "ipa": "[kja]", "translation": "кто" },
-        { "word": "Qer", "ipa": "[kjɛr]", "translation": "где" },
-        { "word": "Qo", "ipa": "[kjo]", "translation": "как" }
-      ]
-    }
   ],
   "exercises": [
     {
