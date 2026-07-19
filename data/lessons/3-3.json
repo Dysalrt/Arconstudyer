@@ -1,0 +1,80 @@
+{
+  "id": "3-3",
+  "title": "Прошедшее время",
+  "xp": 10,
+  "theory": [
+    {
+      "title": "Повтор",
+      "body": "Мы знаем что для того чтобы поставить глагол в настоящее время мы берем его инфинитив и в зависимости от его типа добавляем нужный суффикс",
+      "examples": [
+        {
+          "word": "Тип 1",
+          "ipa": "",
+          "translation": "+de"
+        },
+        {
+          "word": "Тип 2",
+          "ipa": "",
+          "translation": "+e"
+        }
+      ]
+    },
+    {
+      "title": "Прошедшее время",
+      "body": "Если вы помните это то наверное у вас не будет проблем с пониманием создания прошедшего времени так как принцип абсолютно идентичен",
+      "examples": [
+        {
+          "word": "Тип 1",
+          "ipa": "",
+          "translation": "+da"
+        },
+        {
+          "word": "Тип 2",
+          "ipa": "",
+          "translation": "+a"
+        }
+      ]
+    },
+    {
+      "title": "Примеры",
+      "body": "Рассмотрим на примерах",
+      "examples": [
+        {
+          "word": "roda",
+          "ipa": "",
+          "translation": "пошел"
+        },
+        {
+          "word": "eda",
+          "ipa": "",
+          "translation": "был"
+        },
+        {
+          "word": "aneda",
+          "ipa": "",
+          "translation": "делал"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "write",
+      "prompt": "Переведите фразу\nVi eda no restauran",
+      "speak": "Vi eda no restauran",
+      "ipaHint": null,
+      "answers": [
+        "Я был у ресторана"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "Переведите фразу\nТы пошел в кафе",
+      "speak": null,
+      "ipaHint": null,
+      "answers": [
+        "Vū roda no cafe"
+      ]
+    }
+  ]
+}
