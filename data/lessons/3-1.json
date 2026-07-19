@@ -1,0 +1,96 @@
+{
+  "id": "3-1",
+  "title": "Первые предлоги",
+  "xp": 10,
+  "theory": [
+    {
+      "title": "Что такое предлог?",
+      "body": "Предлог это слово-атом которое помогает нам в речи понять где и когда все происходит",
+      "examples": [
+        {
+          "word": "я проснулся В 10 часов",
+          "ipa": "",
+          "translation": ""
+        },
+        {
+          "word": "мяч НА столе",
+          "ipa": "",
+          "translation": ""
+        }
+      ]
+    },
+    {
+      "title": "Предлог en",
+      "body": "Данный предлог мы используем чтобы показать что мы находимся в каком-то здании, местности или вообще где угодно но именно внутри чего-то(подобно предлогу В)",
+      "examples": [
+        {
+          "word": "Vi ede on cafe",
+          "ipa": "vi εdε on kafε",
+          "translation": "Я в кафе"
+        },
+        {
+          "word": "Vū ede on restauran",
+          "ipa": "vju εdε on restauran",
+          "translation": "Ты в ресторане"
+        }
+      ]
+    },
+    {
+      "title": "Предлог no",
+      "body": "Все меняется когда я хочу сказать что я например иду куда-то или я рядом с чем то, тут нужен другой предлог",
+      "examples": [
+        {
+          "word": "no",
+          "ipa": "no",
+          "translation": "к/у/рядом с"
+        },
+        {
+          "word": "ro",
+          "ipa": "ro",
+          "translation": "идти"
+        }
+      ]
+    },
+    {
+      "title": "Предлог no",
+      "body": "Зная эти 2 слова я могу уже говорить",
+      "examples": [
+        {
+          "word": "Vū rode no restauran",
+          "ipa": "vju rodε no restauran",
+          "translation": "Ты идешь в ресторан(к ресторану)"
+        },
+        {
+          "word": "Vi ede no cafe",
+          "ipa": "vi εdε no cafε",
+          "translation": "Я у кафе"
+        }
+      ]
+    },
+    {
+      "title": "Предлог no",
+      "body": "Как видите данный предлог как 2 в 1, если вы рядом с чем то, используйте no, если вы идете куда-то, используйте no",
+      "examples": []
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Дополните предложение\nVū rode ___ cafe",
+      "ipaHint": null,
+      "options": [
+        "no",
+        "en"
+      ],
+      "answer": "no"
+    },
+    {
+      "type": "write",
+      "prompt": "Переведите фразу\nТы идешь в кафе",
+      "ipaHint": null,
+      "answers": [
+        "Vū rode no cafe"
+      ]
+    }
+  ]
+}
