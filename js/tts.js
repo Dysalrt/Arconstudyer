@@ -13,12 +13,25 @@ const TTS = (() => {
     "ū": "ю", v: "в", w: "в", x: "кс", y: "и", z: "з",
   };
 
+  const VOWELS = new Set(["a", "e", "i", "o", "u", "ū"]);
+
   function transliterate(word) {
-    return word
-      .toLowerCase()
-      .split("")
-      .map((ch) => (ch in LETTER_MAP ? LETTER_MAP[ch] : ch))
-      .join("");
+    const chars = word.toLowerCase().split("");
+    let result = "";
+    for (let i = 0; i < chars.length; i++) {
+      const ch = chars[i];
+      if (ch === "ū") {
+        // "ю" после согласной в русском — это просто мягкая согласная + "у",
+        // без отдельного звука [j]. Чтобы получить настоящий глайд (как в "вью"),
+        // нужен мягкий знак перед "ю" — но только если до этого стояла согласная.
+        const prev = chars[i - 1];
+        const prevIsConsonant = prev && !VOWELS.has(prev);
+        result += (prevIsConsonant ? "ь" : "") + "ю";
+      } else {
+        result += ch in LETTER_MAP ? LETTER_MAP[ch] : ch;
+      }
+    }
+    return result;
   }
 
   const supported = "speechSynthesis" in window;
