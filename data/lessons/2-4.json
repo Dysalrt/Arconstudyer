@@ -1,0 +1,79 @@
+{
+  "id": "2-4",
+  "title": "Практика",
+  "xp": 10,
+  "theory": [
+    {
+      "title": "Лексикон",
+      "body": "Для этого урока вам понадобятся такие слова и фразы",
+      "examples": [
+        {
+          "word": "Qo",
+          "ipa": "kjo",
+          "translation": "как"
+        },
+        {
+          "word": "Ven",
+          "ipa": "vεn",
+          "translation": "хорошо"
+        },
+        {
+          "word": "noce",
+          "ipa": "nocε",
+          "translation": "Спасибо"
+        }
+      ]
+    },
+    {
+      "title": "Поправки",
+      "body": "Для того чтобы сказать: Я в порядке или Я хороший мы говорим Vi ede ven\nГлагол e используется постоянно для описания состояния \nQo ede vū? - Как ты?",
+      "examples": []
+    }
+  ],
+  "exercises": [
+    {
+      "type": "match",
+      "pairs": [
+        [
+          "Qo",
+          "как"
+        ],
+        [
+          "Ven",
+          "хорошо"
+        ],
+        [
+          "Noce",
+          "спасибо"
+        ]
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "Переведи фразу\nПривет, как ты?",
+      "ipaHint": null,
+      "answers": [
+        "Qite, qo ede vū?"
+      ]
+    },
+    {
+      "type": "choice",
+      "prompt": "Какого слова здесь не хватает \nQite, vi ___ ven.",
+      "ipaHint": null,
+      "options": [
+        "qo",
+        "ede",
+        "qami"
+      ],
+      "answer": "ede"
+    },
+    {
+      "type": "write",
+      "prompt": "Переведите фразу\nQite, vi ede ven",
+      "ipaHint": null,
+      "answers": [
+        "Привет я в порядке"
+      ]
+    }
+  ]
+}
