@@ -36,7 +36,11 @@ const TTS = (() => {
   function pickVoice() {
     if (!supported) return;
     const voices = speechSynthesis.getVoices();
-    ruVoice = voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("ru")) || null;
+    const ruVoices = voices.filter((v) => v.lang && v.lang.toLowerCase().startsWith("ru"));
+    // Голоса Google звучат заметно естественнее на непривычных/несловарных
+    // сочетаниях букв, чем офлайн-голоса Windows (SAPI) — предпочитаем его,
+    // но если его нет на устройстве, берём любой другой русский голос.
+    ruVoice = ruVoices.find((v) => v.name.toLowerCase().includes("google")) || ruVoices[0] || null;
   }
 
   if (supported) {
