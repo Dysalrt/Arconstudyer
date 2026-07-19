@@ -28,7 +28,8 @@
       "title": "Предлоги и время",
       "lessons": [
         { "id": "3-1", "title": "Первые предлоги", "subtitle": "en, no", "file": "3-1.json" },
-        { "id": "3-2", "title": "Времена и преветствия по ним", "subtitle": "dar, dūr, nev, nūv", "file": "3-2.json" }
+        { "id": "3-2", "title": "Времена и преветствия по ним", "subtitle": "dar, dūr, nev, nūv", "file": "3-2.json" },
+        { "id": "3-3", "title": "Прошедшее время", "subtitle": "+da, +a", "file": "3-3.json" }
       ]
     }
   ]
