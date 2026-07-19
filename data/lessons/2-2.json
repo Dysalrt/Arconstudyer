@@ -15,16 +15,16 @@
       "title": "Изменения глаголов",
       "body": "Чтобы говорить глаголами надо знать как их менять по времени, и базой всегда будет настоящее, для того чтобы изменить глагол для использования в настоящем времени просто посмотрите на схему",
       "examples": [
-        { "word": "Тип I → +de", "ipa": "", "translation": "" },
-        { "word": "Тип II → +e", "ipa": "", "translation": "делать → буду делать" }
+        { "word": "Тип I -> +de", "ipa": "", "translation": "" },
+        { "word": "Тип II -> +e", "ipa": "", "translation": "делать → буду делать" }
       ]
     },
     {
       "title": "Примеры I",
       "body": "Разберем на примерах",
       "examples": [
-        { "word": "e → тип I → +de → ede", "ipa": "", "translation": "" },
-        { "word": "ane → тип I → +de → anede", "ipa": "", "translation": "" }
+        { "word": "e -> тип I -> +de -> ede", "ipa": "", "translation": "" },
+        { "word": "ane -> тип I -> +de -> anede", "ipa": "", "translation": "" }
       ]
     },
     {
