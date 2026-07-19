@@ -23,6 +23,12 @@
         { "id": "2-3", "title": "Формирование пренадлежности", "subtitle": "vis, vūs", "file": "2-3.json"},
         { "id": "2-4", "title": "Практика", "subtitle": "ven, ede, qo", "file": "2-4.json"}
       ]
+    },
+    { "id": "2",
+      "title": "Предлоги и время",
+      "lessons": [
+        { "id": "3-1", "title": "Первые предлоги", "subtitle": "en, no", "file": "3-1.json" }
+      ]
     }
   ]
 }
