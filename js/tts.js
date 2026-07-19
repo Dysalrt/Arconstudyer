@@ -13,25 +13,21 @@ const TTS = (() => {
     "ū": "ю", v: "в", w: "в", x: "кс", y: "и", z: "з",
   };
 
-  const VOWELS = new Set(["a", "e", "i", "o", "u", "ū"]);
+  // Точечные исключения: если какое-то слово (в оригинальном написании Arcon,
+  // с маленькой буквы) звучит криво по общим правилам транслитерации —
+  // впиши сюда его "на слух" подобранное кириллическое написание.
+  // Ключ — слово Arcon в нижнем регистре, значение — как это должно звучать.
+  const OVERRIDES = {
+    // "vūs": "вус", // пример: раскомментируй и подставь вариант, который сам подберёшь на слух
+  };
 
   function transliterate(word) {
-    const chars = word.toLowerCase().split("");
-    let result = "";
-    for (let i = 0; i < chars.length; i++) {
-      const ch = chars[i];
-      if (ch === "ū") {
-        // "ю" после согласной в русском — это просто мягкая согласная + "у",
-        // без отдельного звука [j]. Чтобы получить настоящий глайд (как в "вью"),
-        // нужен мягкий знак перед "ю" — но только если до этого стояла согласная.
-        const prev = chars[i - 1];
-        const prevIsConsonant = prev && !VOWELS.has(prev);
-        result += (prevIsConsonant ? "ь" : "") + "ю";
-      } else {
-        result += ch in LETTER_MAP ? LETTER_MAP[ch] : ch;
-      }
-    }
-    return result;
+    const lower = word.toLowerCase();
+    if (lower in OVERRIDES) return OVERRIDES[lower];
+    return lower
+      .split("")
+      .map((ch) => (ch in LETTER_MAP ? LETTER_MAP[ch] : ch))
+      .join("");
   }
 
   const supported = "speechSynthesis" in window;
