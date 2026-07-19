@@ -156,10 +156,14 @@ const Exercises = (() => {
     container.innerHTML = `
       <div class="exercise-prompt">
         ${data.prompt.replace(/\n/g, "<br>")}
+        ${data.speak ? `<button class="speak-btn" type="button" data-word="${data.speak}">🔊</button>` : ""}
         ${data.ipaHint ? `<span class="ipa-hint">${data.ipaHint}</span>` : ""}
       </div>
       <input type="text" class="write-input" placeholder="Напиши ответ..." autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" />
     `;
+    const speakBtn = container.querySelector(".speak-btn");
+    if (speakBtn) speakBtn.onclick = () => TTS.speak(speakBtn.dataset.word);
+
     const input = container.querySelector(".write-input");
     input.addEventListener("input", () => {
       currentAnswerReady = input.value.trim().length > 0;
