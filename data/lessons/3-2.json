@@ -1,0 +1,135 @@
+{
+  "id": "3-2",
+  "title": "Времена и приветствия по ним",
+  "xp": 10,
+  "theory": [
+    {
+      "title": "Времена",
+      "body": "Весь день разбит на 4 куска, каждый из которых длится по 6 часов, эти куски имеют свои названия",
+      "examples": [
+        {
+          "word": "dar",
+          "ipa": "dar",
+          "translation": "от 3:00 до 9:00"
+        },
+        {
+          "word": "dūr",
+          "ipa": "djur",
+          "translation": "от 9:00 до 15:00"
+        },
+        {
+          "word": "nev",
+          "ipa": "nεv",
+          "translation": "от 15:00 до 21:00"
+        },
+        {
+          "word": "nūv",
+          "ipa": "njuv",
+          "translation": "от 21:00 до 3:00"
+        }
+      ]
+    },
+    {
+      "title": "Времена",
+      "body": "Чтобы запоминалось проще можно привести аналогию с русским",
+      "examples": [
+        {
+          "word": "dar",
+          "ipa": "dar",
+          "translation": "утро"
+        },
+        {
+          "word": "dūr",
+          "ipa": "djur",
+          "translation": "день"
+        },
+        {
+          "word": "nev",
+          "ipa": "nεv",
+          "translation": "вечер"
+        },
+        {
+          "word": "nūv",
+          "ipa": "njuv",
+          "translation": "ночь"
+        }
+      ]
+    },
+    {
+      "title": "Вежливое преветствие",
+      "body": "В русском есть приветствия типа \"Доброе утро\" или \"Добрый день\" и тоже самое есть и тут",
+      "examples": [
+        {
+          "word": "Vendar",
+          "ipa": "vεndar",
+          "translation": "Доброе утро"
+        },
+        {
+          "word": "Vendūr",
+          "ipa": "vεndjur",
+          "translation": "Добрый день"
+        },
+        {
+          "word": "Vennev",
+          "ipa": "vεnnev",
+          "translation": "Доброе утро"
+        },
+        {
+          "word": "Vennūv",
+          "ipa": "vεnnjuv",
+          "translation": "Доброй ночи(спокойной ночи тоже как вариант)"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Если сейчас 14 часов то сейчас...",
+      "ipaHint": null,
+      "options": [
+        "dar",
+        "dūr",
+        "nev",
+        "nūv"
+      ],
+      "answer": "dūr"
+    },
+    {
+      "type": "choice",
+      "prompt": "Если сейчас 6 часов то сейчас...",
+      "ipaHint": null,
+      "options": [
+        "dar",
+        "dūr",
+        "nev",
+        "nūv"
+      ],
+      "answer": "dar"
+    },
+    {
+      "type": "choice",
+      "prompt": "Если сейчас 22 часа то сейчас...",
+      "ipaHint": null,
+      "options": [
+        "dar",
+        "dūr",
+        "nev",
+        "nūv"
+      ],
+      "answer": "nūv"
+    },
+    {
+      "type": "choice",
+      "prompt": "Если сейчас 18 часов то сейчас...",
+      "ipaHint": null,
+      "options": [
+        "dar",
+        "dūr",
+        "nev",
+        "nūv"
+      ],
+      "answer": "nev"
+    }
+  ]
+}
