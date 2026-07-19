@@ -63,5 +63,5 @@ const TTS = (() => {
     return /^[A-Za-zŪū]+$/.test(text.trim());
   }
 
-  return { speak, isSpeakable, supported };
+  return { speak, isSpeakable, supported, transliterate };
 })();
