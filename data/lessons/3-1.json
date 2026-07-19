@@ -91,6 +91,14 @@
       "answers": [
         "Vū rode no cafe"
       ]
+    },
+    {
+      "type": "write",
+      "prompt": "Переведи фразу\nЯ в кафе",
+      "ipaHint": null,
+      "answers": [
+        "Vi ede en cafe"
+      ]
     }
   ]
 }
