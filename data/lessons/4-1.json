@@ -1,0 +1,95 @@
+{
+  "id": "4-1",
+  "title": "Местоимения и больше слов",
+  "xp": 10,
+  "theory": [
+    {
+      "title": "Местоимения",
+      "body": "Мы уже знаем 2 местоимения, Я(Vi) и Ты(Vū) но с таким словарным запасом далеко не уйдешь, поэтому сейчас мы его немного пополним",
+      "examples": [
+        {
+          "word": "Il",
+          "ipa": "il",
+          "translation": "он"
+        },
+        {
+          "word": "El",
+          "ipa": "εl",
+          "translation": "она"
+        },
+        {
+          "word": "Di",
+          "ipa": "di",
+          "translation": "это/оно"
+        }
+      ]
+    },
+    {
+      "title": "Дополнения",
+      "body": "Так как у нас есть правила для формирования принадлежности мы спокойно можем создать еще и такие слова",
+      "examples": [
+        {
+          "word": "ilis",
+          "ipa": "ilis",
+          "translation": "его"
+        },
+        {
+          "word": "elis",
+          "ipa": "εlis",
+          "translation": "ее"
+        },
+        {
+          "word": "dis",
+          "ipa": "dis",
+          "translation": "этого"
+        }
+      ]
+    },
+    {
+      "title": "Примеры и новые слова",
+      "body": "Взглянем на пару примеров в которых так же есть еще пару новых слов",
+      "examples": [
+        {
+          "word": "Ilis vuer ede ven",
+          "ipa": "",
+          "translation": "Его дом хороший"
+        },
+        {
+          "word": "Di ede elis fūn",
+          "ipa": "",
+          "translation": "Это ее телефон"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "write",
+      "prompt": "Переведи фразу\nVi eda en ilis vuer dat dūr",
+      "speak": "Vi eda en ilis vuer dat dūr",
+      "ipaHint": null,
+      "answers": [
+        "Я был в его доме вечером",
+        "Я был у него дома вечером"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "Переведи фразу\nТы был у ее дома",
+      "speak": null,
+      "ipaHint": null,
+      "answers": [
+        "Vū eda no elis vuer"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "Переведи фразу\nElis fūn ede en ilis vuer",
+      "speak": null,
+      "ipaHint": null,
+      "answers": [
+        "Ее телефон у него дома"
+      ]
+    }
+  ]
+}
