@@ -1,0 +1,70 @@
+{
+  "id": "3-4",
+  "title": "Предлог для времени",
+  "xp": 10,
+  "theory": [
+    {
+      "title": "Повтор",
+      "body": "У нас уже есть 2 предлога но они так или иначе обозначают направление или положение, но что насчет времени",
+      "examples": [
+        {
+          "word": "en",
+          "ipa": "εn",
+          "translation": "в"
+        },
+        {
+          "word": "no",
+          "ipa": "no",
+          "translation": "у/к"
+        }
+      ]
+    },
+    {
+      "title": "Предлог времени dat",
+      "body": "Если мы так или иначе затрагиваем время, год, месяц, неделя, день недели, конкретное время, столетие, не важно, везде 1 предлог для времени",
+      "examples": [
+        {
+          "word": "dat",
+          "ipa": "dat",
+          "translation": ""
+        }
+      ]
+    },
+    {
+      "title": "Примеры",
+      "body": "Взглянем на пару примеров",
+      "examples": [
+        {
+          "word": "Vi eda en cafe dat nev",
+          "ipa": "",
+          "translation": "Я был в кафе вечером"
+        },
+        {
+          "word": "Vū roda no restauran dat dūr",
+          "ipa": "",
+          "translation": "Ты пошел в ресторан днем"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "write",
+      "prompt": "Переведи фразу\nVi eda en restauran dat nev",
+      "speak": "Vi eda en restauran dat nev",
+      "ipaHint": null,
+      "answers": [
+        "Я был в ресторане вечером"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "Переведи фразу\nТы пошел в кафе днем",
+      "speak": null,
+      "ipaHint": null,
+      "answers": [
+        "Vū roda no cafe dat dūr"
+      ]
+    }
+  ]
+}
