@@ -65,7 +65,7 @@
   "exercises": [
     {
       "type": "write",
-      "prompt": "Переведи фразу\nVi eda en ilis vuer dat dūr",
+      "prompt": "Переведи фразу\nVi eda en ilis vuer dat nev",
       "speak": "Vi eda en ilis vuer dat nev",
       "ipaHint": null,
       "answers": [
