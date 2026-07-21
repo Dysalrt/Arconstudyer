@@ -31,7 +31,7 @@
         { "id": "3-2", "title": "Времена и преветствия по ним", "subtitle": "dar, dūr, nev, nūv", "file": "3-2.json" },
         { "id": "3-3", "title": "Прошедшее время", "subtitle": "+da, +a", "file": "3-3.json"},
         { "id": "3-4", "title": "Предлог для времени", "subtitle": "dat", "file": "3-4.json"},
-        { "id": "4-1", "title": "Местоимения и больше слов", "subtitle": "il, el, di", "file": "4-1.json"}
+        { "id": "3-5", "title": "Местоимения и больше слов", "subtitle": "il, el, di", "file": "3-5.json"}
       ]
     }
   ]
