@@ -33,6 +33,13 @@
         { "id": "3-4", "title": "Предлог для времени", "subtitle": "dat", "file": "3-4.json"},
         { "id": "3-5", "title": "Местоимения и больше слов", "subtitle": "il, el, di", "file": "3-5.json"}
       ]
+    },
+    {
+      "id": "4",
+      "title": "Союзы",
+      "lessons": [
+        { "id": "4-1", "title": "Союзы", "subtitle": "it, pū", "file": "4-1.json"}
+      ]
     }
   ]
 }
