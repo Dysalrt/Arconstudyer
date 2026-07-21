@@ -1,0 +1,74 @@
+{
+  "id": "4-1",
+  "title": "Союзы",
+  "xp": 10,
+  "theory": [
+    {
+      "title": "Что такое союзы",
+      "body": "Союзы это такие слова которые нам помогают связывать 2 или больше слов и относится к ним как к группам а в случае с предложениями мы создаем более сложные структуры, вот пару из них",
+      "examples": [
+        {
+          "word": "it",
+          "ipa": "it",
+          "translation": "и"
+        },
+        {
+          "word": "pū",
+          "ipa": "pju",
+          "translation": "или"
+        }
+      ]
+    },
+    {
+      "title": "Примеры",
+      "body": "Чтобы понять как они работают разберем примеры",
+      "examples": [
+        {
+          "word": "Il it el roda no cafe",
+          "ipa": "",
+          "translation": "Он и она пошли в кафе"
+        },
+        {
+          "word": "El eda en cafe dat dūr it roda no vour dat nev",
+          "ipa": "",
+          "translation": "Она была в кафе днем и пошла домой вечером"
+        },
+        {
+          "word": "Il roda no vour dat dūr pū dat nev?",
+          "ipa": "",
+          "translation": "Он пришел домой днем или вечером?"
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "type": "choice",
+      "prompt": "Как будет \"или\"?",
+      "ipaHint": null,
+      "options": [
+        "it",
+        "pū"
+      ],
+      "answer": "pū"
+    },
+    {
+      "type": "write",
+      "prompt": "Переведи\nМы идем в кафе или в ресторан",
+      "speak": null,
+      "ipaHint": null,
+      "answers": [
+        "Vi rode no cafe pū no restauran"
+      ]
+    },
+    {
+      "type": "write",
+      "prompt": "Переведи фразу\nIl it el roda no cafe",
+      "speak": "Il it el roda no cafe",
+      "ipaHint": null,
+      "answers": [
+        "Он и она пошли в кафе"
+      ]
+    }
+  ]
+}
