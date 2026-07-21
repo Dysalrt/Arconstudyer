@@ -66,7 +66,7 @@
     {
       "type": "write",
       "prompt": "Переведи фразу\nVi eda en ilis vuer dat dūr",
-      "speak": "Vi eda en ilis vuer dat dūr",
+      "speak": "Vi eda en ilis vuer dat nev",
       "ipaHint": null,
       "answers": [
         "Я был в его доме вечером",
